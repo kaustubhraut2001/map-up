@@ -46,7 +46,7 @@ const FilterPanel = ({ filters, onFilterChange, onClearFilters, data }) => {
         {hasActiveFilters && (
           <button
             onClick={onClearFilters}
-            className="flex items-center space-x-1 text-sm text-gray-500 hover:text-red-600 transition-colors"
+            className="flex items-center space-x-1 text-sm text-gray-500 transition-colors filter-button"
           >
             <X className="w-4 h-4" />
             <span>Clear all</span>
@@ -195,7 +195,7 @@ const FilterPanel = ({ filters, onFilterChange, onClearFilters, data }) => {
                   <span>{displayValue}</span>
                   <button
                     onClick={() => onFilterChange({ [key]: "" })}
-                    className="hover:text-blue-600 transition-colors"
+                    className="transition-colors filter-remove"
                   >
                     <X className="w-3 h-3" />
                   </button>

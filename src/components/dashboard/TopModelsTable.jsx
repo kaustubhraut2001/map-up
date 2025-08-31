@@ -92,7 +92,7 @@ const TopModelsTable = ({ data }) => {
             <th className="text-left py-3 px-4 font-semibold text-gray-700">
               <button
                 onClick={() => handleSort("make")}
-                className="flex items-center space-x-1 hover:text-blue-600 transition-colors"
+                className="flex items-center space-x-1 transition-colors sort-button"
               >
                 <span>Make & Model</span>
                 {getSortIcon("make")}
@@ -101,7 +101,7 @@ const TopModelsTable = ({ data }) => {
             <th className="text-left py-3 px-4 font-semibold text-gray-700">
               <button
                 onClick={() => handleSort("count")}
-                className="flex items-center space-x-1 hover:text-blue-600 transition-colors"
+                className="flex items-center space-x-1 transition-colors sort-button"
               >
                 <span>Count</span>
                 {getSortIcon("count")}
@@ -110,7 +110,7 @@ const TopModelsTable = ({ data }) => {
             <th className="text-left py-3 px-4 font-semibold text-gray-700">
               <button
                 onClick={() => handleSort("avgRange")}
-                className="flex items-center space-x-1 hover:text-blue-600 transition-colors"
+                className="flex items-center space-x-1 transition-colors sort-button"
               >
                 <span>Avg Range</span>
                 {getSortIcon("avgRange")}
@@ -119,7 +119,7 @@ const TopModelsTable = ({ data }) => {
             <th className="text-left py-3 px-4 font-semibold text-gray-700">
               <button
                 onClick={() => handleSort("avgPrice")}
-                className="flex items-center space-x-1 hover:text-blue-600 transition-colors"
+                className="flex items-center space-x-1 transition-colors sort-button"
               >
                 <span>Avg Price</span>
                 {getSortIcon("avgPrice")}
@@ -134,7 +134,7 @@ const TopModelsTable = ({ data }) => {
           {topModels.map((model, index) => (
             <tr
               key={`${model.make}-${model.model}`}
-              className="border-b border-gray-100 hover:bg-gray-50 transition-colors"
+              className="border-b border-gray-100 transition-colors table-row"
             >
               <td className="py-4 px-4">
                 <div>
