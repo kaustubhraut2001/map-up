@@ -31,21 +31,21 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("dashboard")}
-              className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer"
+              className="flex items-center space-x-2 text-gray-700 transition-colors cursor-pointer nav-button"
             >
               <BarChart3 className="w-4 h-4" />
               <span>Dashboard</span>
             </button>
             <button
               onClick={() => scrollToSection("analytics")}
-              className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer"
+              className="flex items-center space-x-2 text-gray-700 transition-colors cursor-pointer nav-button"
             >
               <TrendingUp className="w-4 h-4" />
               <span>Analytics</span>
             </button>
             <button
               onClick={() => scrollToSection("insights")}
-              className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer"
+              className="text-gray-700 transition-colors cursor-pointer nav-button"
             >
               Insights
             </button>

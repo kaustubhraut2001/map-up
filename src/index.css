@@ -6,16 +6,23 @@
         font-family: 'Inter', system-ui, sans-serif;
     }
     body {
-        @apply antialiased;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 }
 
 @layer components {
     .btn-primary {
-        @apply px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-200 font-medium;
+        @apply px-4 py-2 bg-blue-600 text-white rounded-lg transition-colors duration-200 font-medium;
+    }
+    .btn-primary:hover {
+        @apply bg-blue-700;
     }
     .btn-secondary {
-        @apply px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover: bg-gray-300 transition-colors duration-200 font-medium;
+        @apply px-4 py-2 bg-gray-200 text-gray-800 rounded-lg transition-colors duration-200 font-medium;
+    }
+    .btn-secondary:hover {
+        @apply bg-gray-300;
     }
     .card {
         @apply bg-white rounded-xl shadow-lg border border-gray-100;
@@ -23,11 +30,37 @@
     .input-field {
         @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus: ring-blue-500 focus: border-blue-500 transition-colors;
     }
+    /* Navigation button hover effects */
+    .nav-button:hover {
+        color: #2563eb;
+    }
+    /* Table row hover effects */
+    .table-row:hover {
+        background-color: #f9fafb;
+    }
+    /* Filter button hover effects */
+    .filter-button:hover {
+        color: #dc2626;
+    }
+    .filter-remove:hover {
+        color: #2563eb;
+    }
+    /* Sort button hover effects */
+    .sort-button:hover {
+        color: #2563eb;
+    }
+    /* Stat card hover effects */
+    .stat-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
 }
 
 @layer utilities {
     .text-gradient {
-        @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+        background: linear-gradient(to right, #2563eb, #4f46e5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
     .shadow-soft {
         box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);

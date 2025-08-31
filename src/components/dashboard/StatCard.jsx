@@ -33,7 +33,7 @@ const StatCard = ({ title, value, icon, trend, trendUp, color }) => {
 
   return (
     <div
-      className={`${bgColorClasses[color]} rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300`}
+      className={`${bgColorClasses[color]} rounded-xl p-6 shadow-sm border border-gray-100 transition-all duration-300 stat-card`}
     >
       <div className="flex items-center justify-between">
         <div className="flex-1">
